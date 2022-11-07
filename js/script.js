@@ -8,7 +8,7 @@ burger.addEventListener("click",action);
 menu.addEventListener("click",action);
 
 function action(){
-	menu.classList.toggle('_active'); 
+	menu.classList.toggle('_active');  
 }
 
 console.log(items);

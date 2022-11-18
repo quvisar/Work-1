@@ -676,23 +676,15 @@ select {
 }
 
 .container-block-2 {
-  padding: 0 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  padding: 0 10px;
+      grid-template-areas: "left top-rigth" "left bottom-rigth";
 }
 @media (max-width: 1024px) {
   .container-block-2 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+        grid-template-areas: "top-rigth" "left" "bottom-rigth";
   }
 }
 
@@ -847,8 +839,48 @@ select {
           box-shadow: 0px 15px 25px rgba(0, 163, 255, 0.3);
 }
 
+.container__left {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: left;
+}
+
 .container__rigth {
   width: 650px;
+}
+@media (max-width: 1024px) {
+  .container__rigth {
+    width: 100%;
+  }
+}
+
+.rigth_first {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: top-rigth;
+}
+
+.rigth_second {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: bottom-rigth;
+}
+
+@media (max-width: 1024px) {
+  .container__left {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .rigth_first {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .rigth_second {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
 }
 
 .r_title {
@@ -886,7 +918,7 @@ select {
 }
 @media (max-width: 1024px) {
   .r_title:before {
-    left: 29%;
+    left: 14%;
   }
 }
 .r_title:after {
@@ -895,7 +927,7 @@ select {
 }
 @media (max-width: 1024px) {
   .r_title:after {
-    right: 28.5%;
+    right: 13%;
   }
 }
 
@@ -911,6 +943,7 @@ select {
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
+    margin: 0 0 30px 0;
   }
 }
 
@@ -928,7 +961,7 @@ select {
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0em;
-  text-align: justify;
+  text-align: left;
   list-style: none;
 }
 @media (max-width: 1024px) {
@@ -936,7 +969,7 @@ select {
     font-size: 12px;
     line-height: 15px;
     max-width: 280px;
-    margin: 30px auto 0;
+    margin: 30px 0 0 0;
   }
 }
 .r_text span {

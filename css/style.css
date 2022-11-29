@@ -16,6 +16,9 @@ body {
   -webkit-transition-duration: 3s;
           transition-duration: 3s;
 }
+body._active {
+  overflow: hidden;
+}
 
 a {
   color: white;
@@ -38,6 +41,8 @@ a {
           justify-content: space-between;
   width: 35px;
   height: 13px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 @media (max-width: 768px) {
   .burger {
@@ -240,6 +245,7 @@ a {
     top: 0;
     height: 100%;
     opacity: 0.9;
+    overflow: hidden;
     background: linear-gradient(113.28deg, #1A47EA 3.44%, #82E9FF 96.25%) no-repeat;
   }
 }

@@ -1620,6 +1620,11 @@ select {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+@media (max-width: 1024px) {
+  .accordion-container {
+    padding: 0 15px;
+  }
+}
 
 .accordion-container2 {
   background: white;
@@ -1722,7 +1727,7 @@ select {
 @media (max-width: 1024px) {
   .block6-bg {
     height: auto;
-    background: url("../img/block-6/bottom2.svg") bottom no-repeat, rgb(245, 249, 255);
+    background: url("../img/block-6/bottom2.svg") 15% bottom no-repeat, rgb(245, 249, 255);
   }
 }
 

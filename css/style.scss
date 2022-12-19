@@ -1229,6 +1229,9 @@ grid-area: bottom-rigth;
 			}
 		}
 	}
+	@media(max-width: 1024px){
+		padding:0 15px;
+	}
 }
 
 .accordion-container2 {
@@ -1320,7 +1323,7 @@ grid-area: bottom-rigth;
 	}
 	@media(max-width: 1024px){
 		height: auto;
-		background:url("../img/block-6/bottom2.svg")bottom no-repeat ,rgba(245, 249, 255, 1) ;
+		background:url("../img/block-6/bottom2.svg")15% bottom no-repeat ,rgba(245, 249, 255, 1) ;
 	}
 }
 .block6-container {

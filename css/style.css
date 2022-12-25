@@ -265,12 +265,14 @@ a {
 }
 
 .header__btns {
+  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  width: 215px;
   height: 60px;
 }
 @media (max-width: 1024px) {
@@ -290,42 +292,130 @@ a {
 }
 
 .select {
-  position: relative;
-  height: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 2px;
+  right: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  width: 123px;
+  max-height: 58px;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  background: white;
 }
-.select:after {
+.select:before {
   content: "";
   position: absolute;
-  top: 50%;
-  right: 10%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-top: 5px solid #2E3A59;
+  top: 27px;
+  right: 12px;
+  border-top: 5px solid rgb(46, 58, 89);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  pointer-events: none;
 }
-
-select {
-  background: url("../img/header/image 253.svg") 20% 50% no-repeat white;
-  outline: 0;
-  border-radius: 5px;
-  border: 0;
-  width: 123px;
-  height: 100%;
-  margin: 0 5px 0 0;
-  font-weight: 700;
-  font-size: 17px;
-  padding: 0 0 0 65px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+.select:hover {
+  max-height: 400px;
+}
+.select:hover:before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.select input {
+  display: none;
+}
+.select input:checked ~ .select- {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 @media (max-width: 1024px) {
-  select {
-    width: 70px;
-    padding: 0 0 0 15px;
-    background: white;
+  .select {
+    right: 70px;
+    width: 66px;
+  }
+  .select:before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .select {
+    width: 130px;
+  }
+}
+@media (max-width: 425px) {
+  .select {
+    top: 15px;
+    width: 66px;
+    right: 20px;
+    max-height: 36px;
+  }
+}
+
+.select- {
+  color: #2E3A59;
+  font-weight: 700;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 0 60px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  height: 58px;
+  background: white;
+}
+@media (max-width: 425px) {
+  .select- {
+    height: 36px;
+    padding: 0 0 0 36px;
+    font-size: 12px;
+  }
+}
+
+.select1 {
+  background: url("../img/header/image 253.svg") 20% 50% no-repeat white;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media (max-width: 425px) {
+  .select1 {
+    background-size: 25px 18px;
+  }
+}
+
+.select2 {
+  background: url("../img/header/ukraine.png") 20% 50%/30px 20px no-repeat white;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+@media (max-width: 425px) {
+  .select2 {
+    background-size: 20px 14px;
+  }
+}
+
+.select3 {
+  background: url("../img/header/united-states.png") 20% 50%/30px 20px no-repeat white;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+@media (max-width: 425px) {
+  .select3 {
+    background-size: 20px 14px;
   }
 }
 
@@ -1727,7 +1817,7 @@ select {
 @media (max-width: 1024px) {
   .block6-bg {
     height: auto;
-    background: url("../img/block-6/bottom2.svg") 15% bottom no-repeat, rgb(245, 249, 255);
+    background: url("../img/block-6/image357.png") 10% 100% no-repeat, url("../img/block-6/image360.png") 90% 104% no-repeat, url("../img/block-6/image360.png") 60% 96% no-repeat, url("../img/block-6/image360.png") 100% 62% no-repeat, url("../img/block-6/image360.png") 1% 60% no-repeat, url("../img/block-6/bottom2.svg") 15% bottom no-repeat, rgb(245, 249, 255);
   }
 }
 
